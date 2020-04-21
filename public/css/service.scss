@@ -1,0 +1,46 @@
+@import"variable";
+.service {
+    padding-top: 80px;
+    color: $green-dank;
+    background: $green-white;
+    &-big-title {
+        &::after {
+            background: $green-dank;
+        }
+    }
+    &--top {
+        background: url(../img/shape_img1.png) no-repeat bottom right;
+        padding-top: 90px;
+        .service__img {
+            padding-right: 30px;
+        }
+    }
+    &--bottom {
+        background: url(../img/shape_img2.png) no-repeat bottom left;
+        padding-top: 90px;
+        padding-bottom: 70px;
+        .service__img {
+            padding-left: 30px;
+        }
+    }
+    &__content {
+        color: #333333;
+        .service__title {
+            margin-bottom: 20px;
+            h4 {
+                font-size: 48px;
+                font-family: SVN-Unthrift;
+            }
+        }
+        .service__text {
+            p {
+                font-size: 14px;
+            }
+        }
+    }
+    @media (max-width:575px) {
+        .service__img {
+            padding: 0;
+        }
+    }
+}

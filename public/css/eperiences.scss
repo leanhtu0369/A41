@@ -1,0 +1,31 @@
+@import"variable";
+.eperiences {
+    padding: 70px 0;
+    color: $white;
+    background: $green-dank;
+    &-big-title {
+        padding-bottom: 80px;
+        &::after {
+            background: $white;
+        }
+    }
+    .owl-theme .owl-nav {
+        text-align: right;
+        margin-top: 50px;
+    }
+    .owl-item-info {
+        padding: 15px 20px;
+        background: $white;
+        span {
+            color: #999999;
+            font-size: 14px;
+        }
+        p {
+            color: #333333;
+            font-size: 24px;
+            font-weight: bold;
+            padding-top: 20px;
+            padding-bottom: 10px;
+        }
+    }
+}

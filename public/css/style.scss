@@ -1,0 +1,150 @@
+@import "banner";
+@import "business";
+@import "service";
+@import "eperiences";
+@import "partner";
+@import "about_us";
+@import "contact";
+@font-face {
+    font-family: SVN-Unthrift;
+    src: url(../font/SVN-Unthrift.otf);
+}
+
+@font-face {
+    font-family: SitkaB;
+    src: url(../font/SitkaB.ttc);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    font-size: 12px;
+    // position: relative;
+}
+
+P,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+a:hover {
+    color: $white;
+}
+
+.active {
+    text-decoration: underline;
+    color: $white;
+}
+
+.big-title {
+    text-align: center;
+    color: inherit;
+    text-transform: uppercase;
+    position: relative;
+    &::after {
+        position: absolute;
+        width: 100px;
+        height: 4px;
+        content: "";
+        transform: translateX(50%);
+        right: 50%;
+    }
+    h3 {
+        font-size: 48px;
+        font-family: SitkaB;
+        font-weight: bold;
+        margin-bottom: 10px;
+        @media (max-width: 575px) {
+            font-size: 36px;
+        }
+    }
+}
+
+.article {
+    &__title {
+        font-family: SVN-Unthrift;
+        font-size: 60px;
+        line-height: 60px;
+        margin-bottom: 30px;
+        @media (max-width: 767px) {
+            font-size: 35px;
+            line-height: 35px;
+            margin-top: 20px;
+        }
+    }
+    &__text {
+        line-height: 25px;
+        p {
+            margin-bottom: 10px;
+        }
+    }
+    &__content {
+        font-size: 14px;
+    }
+}
+
+.cbp-spmenu-right {
+    font-size: 16px;
+    position: relative;
+    z-index: 9999;
+    padding: 10px;
+    .nav {
+        display: block;
+        .nav-link {
+            border-bottom: 1px solid #42515E;
+            padding: 15px 0;
+            color: #ffffff;
+            font-size: 14px;
+            &:hover,
+            &.current {
+                color: #3b9b8f;
+            }
+        }
+    }
+}
+
+// $number_item: 3;
+// $margin: 50px;
+// $width_item: calc((100% - (#{$number_item} * #{$margin}))/ 3);
+// .carousel-item {
+//     width: 0;
+//     margin-right: $margin;
+// }
+// .carousel-item.active {
+//     width: $width_item;
+//     margin-right: $margin;
+// }
+// .carousel-control-prev,
+// .carousel-control-next {
+//     top: unset;
+//     bottom: -50px;
+//     width: 50px;
+// }
+// .carousel-control-prev {
+//     right: 50px;
+//     left: unset;
+// }
+// .carousel-item-next:not(.carousel-item-left),
+// .active.carousel-item-right {
+//     -webkit-transform: translateX($width_item);
+//     transform: translateX($width_item);
+// }
+// .carousel-item-prev:not(.carousel-item-right),
+// .active.carousel-item-left {
+//     -webkit-transform: translateX(-$width_item);
+//     transform: translateX(-$width_item);
+// }

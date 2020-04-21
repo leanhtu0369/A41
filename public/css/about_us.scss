@@ -1,0 +1,32 @@
+@import"variable";
+.about_us {
+    padding: 100px 0;
+    color: $green-dank;
+    .about_us-big-title {
+        margin-bottom: 60px;
+        &::after {
+            background: $green-dank;
+        }
+    }
+    &__company {
+        color: #333333;
+        margin: 0 160px;
+        @media (max-width: 991px) {
+            margin: 0 80px;
+        }
+        @media (max-width: 991px) {
+            margin: 0 15px;
+        }
+        .company {
+            padding: 20px 0;
+            font-size: 18px;
+            border-bottom: 1px solid #025f67;
+            &:first-child {
+                border-top: 1px solid #025f67;
+            }
+            &-name {
+                text-transform: uppercase;
+            }
+        }
+    }
+}

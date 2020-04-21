@@ -1,0 +1,23 @@
+@import"variable";
+.partner {
+    padding-top: 100px;
+    padding-bottom: 90px;
+    background: $green-light;
+    color: $green-dank;
+    &-big-title {
+        padding-bottom: 70px;
+        &::after {
+            background: $green-dank;
+        }
+    }
+    &__logo {
+        .partner-list {
+            display: flex;
+            flex-wrap: wrap;
+            &__item {
+                margin: auto;
+                list-style: none;
+            }
+        }
+    }
+}

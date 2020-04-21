@@ -1,0 +1,74 @@
+@import"variable";
+.contact {
+    background: $green-dank url(../img/bg_shape.png) no-repeat bottom right;
+    color: $white;
+    &--top {
+        padding-bottom: 70px;
+        padding-top: 65px;
+        .contact-big-title {
+            margin-bottom: 50px;
+            &::after {
+                background: $white;
+            }
+        }
+        .contact__country {
+            margin-bottom: 30px;
+            h4 {
+                font-size: 48px;
+                font-family: SVN-Unthrift;
+            }
+        }
+        .contact__info {
+            .contact__title {
+                p {
+                    font-size: 12px;
+                    text-transform: uppercase;
+                    margin-bottom: 10px;
+                }
+            }
+            .contact__content {
+                color: #c3f9ea;
+                p {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin-bottom: 30px;
+                }
+                .brand-list {
+                    display: flex;
+                    flex-wrap: wrap;
+                    &__item {
+                        list-style: none;
+                        width: 32px;
+                        margin-right: 10px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+    }
+    &--bottom {
+        border-top: 1px solid #4abaac;
+        padding-bottom: 35px;
+        padding-top: 20px;
+        font-size: 14px;
+        p {
+            margin-bottom: 0;
+        }
+        .nav-item:not(:first-child) {
+            border-left: 1px solid $white;
+        }
+        // .nav-item:not(:first-child) {
+        //     &::before {
+        //         content: "";
+        //         height: 10px;
+        //         width: 1px;
+        //         padding-left: 20px;
+        //     }
+        // }
+        .nav-link {
+            padding: 0 20px;
+            color: inherit;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+    }
+}

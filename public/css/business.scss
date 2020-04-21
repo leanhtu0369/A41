@@ -1,0 +1,204 @@
+@import"variable";
+.business {
+    background-image: linear-gradient($green-dank 550px, $green-white 550px);
+    padding-bottom: 0;
+    padding-top: 55px;
+    color: $white;
+    &-big-title {
+        padding-bottom: 90px;
+        &::after {
+            background: $white;
+        }
+    }
+    .flexslider {
+        background: transparent;
+        border: none;
+        margin-bottom: 30px;
+        &__thumbnail {
+            &__item {
+                text-align: center;
+                color: #ffffff;
+                text-transform: uppercase;
+                font-weight: bold;
+                margin-top: 10px;
+                padding: 10px;
+                height: 200px;
+                &.flex-active-slide {
+                    border: 2px solid rgba(255, 255, 255, 0.5);
+                    border-radius: 4px;
+                    img {
+                        width: 120px;
+                    }
+                }
+                img {
+                    width: 100px;
+                    margin: auto;
+                }
+                .text {
+                    margin-top: 20px;
+                    font-size: 18px;
+                }
+            }
+        }
+        &__content {
+            background-image: url("../img/bg_business-l.png"), url("../img/bg_business-r.png");
+            background-position: left bottom, right top;
+            background-repeat: no-repeat, no-repeat;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+            background-color: #ffffff;
+            padding: 60px;
+            position: relative;
+            margin-bottom: 0;
+            color: #333333;
+            &:before {
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border-left: 30px solid transparent;
+                border-right: 30px solid transparent;
+                border-bottom: 20px solid #ffffff;
+                top: -20px;
+                left: 50%;
+                margin-left: -15px;
+            }
+            &__item {
+                display: flex;
+                flex-wrap: wrap;
+                &--left {
+                    width: 300px;
+                    img {
+                        width: 200px;
+                    }
+                }
+                &--right {
+                    width: calc(100% - 300px);
+                    padding-left: 30px;
+                    .article__content {
+                        padding-left: 20px;
+                        li {
+                            list-style: square;
+                            ul {
+                                padding-left: 20px;
+                                li {
+                                    list-style: circle;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .flex-direction-nav {
+                display: none;
+            }
+            @media (min-width: 768px) and (max-width: 992px) {
+                padding: 30px;
+                &__item--left {
+                    width: 200px;
+                }
+                &__item--right {
+                    width: calc(100% - 200px);
+                }
+            }
+            @media screen and (max-width: 767px) {
+                background-image: url("../img/bg_business-r.png");
+                background-position: right top;
+                background-repeat: no-repeat;
+                padding: 40px 20px 20px;
+                &__item--left {
+                    width: 100%;
+                    img {
+                        width: 150px;
+                        margin: auto;
+                    }
+                }
+                &__item--right {
+                    width: 100%;
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+}
+
+// .business {
+//     padding-top: 55px;
+//     color: $white;
+//     background: $green-dank;
+//     &-big-title {
+//         padding-bottom: 90px;
+//         &::after {
+//             background: $white;
+//         }
+//     }
+//     .container {
+//         position: relative;
+//     }
+//     .owl-carousel {
+//         padding-bottom: 150px;
+//     }
+//     .owl-carousel.owl-drag .owl-item {
+//         padding: 20px;
+//         &.active {
+//             text-decoration: unset;
+//         }
+//         &.scale {
+//             transform: scale(1.2, 1.2);
+//             img {
+//                 border: 1px solid $white;
+//             }
+//         }
+//         &-img {
+//             height: 100px;
+//             display: flex;
+//             position: relative;
+//             img {
+//                 width: unset;
+//                 margin: auto;
+//                 margin-bottom: 0;
+//             }
+//         }
+//         p {
+//             margin-top: 30px;
+//             color: $white;
+//             text-transform: uppercase;
+//             text-align: center;
+//             font-size: 18px;
+//             font-weight: bold;
+//         }
+//     }
+//     &-tabs {
+//         background: $white;
+//         position: absolute;
+//         top: 86%;
+//         left: 15px;
+//         right: 15px;
+//         box-shadow: 0px 0px 5px 0px rgba($color: #000, $alpha: .1);
+//         // background: $white url(../img/bg_business.png) no-repeat;
+//         // background-size: cover;
+//         // background: url(../img/bg_business-l.png), url(../img/bg_business-r.png) no-repeat;
+//         &--left {
+//             background: url(../img/bg_business-l.png) no-repeat bottom left;
+//             img {
+//                 padding: 80px 60px;
+//             }
+//         }
+//         &--right {
+//             background: url(../img/bg_business-r.png) no-repeat top right;
+//             color: #333333;
+//             padding: 80px 0;
+//             &__title {
+//                 margin-bottom: 40px;
+//                 h4 {
+//                     font-size: 60px;
+//                     font-family: SVN-Unthrift;
+//                 }
+//             }
+//             &__text {
+//                 p {
+//                     font-size: 14px;
+//                 }
+//             }
+//         }
+//     }
+// }

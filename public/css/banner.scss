@@ -1,0 +1,111 @@
+@import"variable";
+.banner {
+    background: $green-white url('../img/bg_banner.png') no-repeat right;
+    background-size: cover;
+    padding-top: 10px;
+    color: $nav-link;
+    @media (max-width: 991px) {
+        background: $green-white;
+    }
+    &--top {
+        display: flex;
+        @media (max-width: 767px) {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+            box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+            background: rgba(255, 255, 255, 0.9);
+        }
+        &--left {
+            @media (max-width: 575px) {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 0 15px;
+            }
+            img {
+                max-width: 100px;
+                @media (max-width: 575px) {
+                    max-width: 50px;
+                }
+            }
+            button {
+                background: unset;
+                border: unset;
+                @media (min-width: 576px) {
+                    display: none;
+                }
+            }
+        }
+        &--right {
+            width: calc(100% - 90px);
+            @media (max-width: 575px) {
+                display: none;
+            }
+            .banner__language {
+                text-align: right;
+                .form-group {
+                    position: relative;
+                    &::after {
+                        position: absolute;
+                        top: 14px;
+                        right: 0;
+                        // content: "\203A";
+                        content: "";
+                        width: 10px;
+                        height: 10px;
+                        background: #3b9b8f url(../img/select.png) no-repeat center;
+                        color: $white;
+                    }
+                    .custom-select {
+                        width: 60px;
+                        border: none;
+                        padding: 0;
+                        background: unset;
+                    }
+                }
+            }
+            .nav {
+                justify-content: flex-end;
+                .nav-link {
+                    font-size: 18px;
+                    color: inherit;
+                    padding-right: 0;
+                    padding-left: 20px;
+                }
+            }
+        }
+    }
+    .banner__info {
+        width: 50%;
+        @media (max-width: 991px) {
+            width: unset;
+        }
+    }
+    &__title {
+        margin-top: 80px;
+        margin-bottom: 10px;
+        h2 {
+            font-family: SVN-Unthrift;
+            font-size: 72px;
+        }
+    }
+    &__des {
+        p {
+            font-size: 18px;
+        }
+    }
+    &__btn {
+        padding-top: 45px;
+        padding-bottom: 70px;
+        button {
+            background: #f2911b;
+            font-size: 18px;
+            padding: 20px 75px;
+            color: $white;
+            text-transform: uppercase;
+        }
+    }
+}
